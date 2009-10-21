@@ -1,0 +1,1 @@
+<a href="<?= $url ?>"  <? if ($alt) : ?>title="<?= $alt ?>"	alt="<?= $alt ?>"<? endif ?><? if ($confirm) : ?>onClick="return confirm('<?= $confirm ?>')"<? endif ?>><?= is_null($content) ? $url : $content ?></a>

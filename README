@@ -1,0 +1,44 @@
+  
+  Jimbo Web Application Framework
+
+  Copyright (c) 2007, Cesar Kastli <cesar@nixar.org>
+
+  This library is free software; you can redistribute it and/or modify
+  it under the terms of the GNU Lesser General Public License as
+  published by the Free Software Foundation; either version 2.1 of the
+  License, or (at your option) any later version
+
+  See http://www.gnu.org/copyleft/lesser.html for details
+
+  Directory structure
+
+  application/
+    class/
+       controller/
+          ApplicationController.class.php
+       model/
+    conf/
+       controllers/
+       settings.php
+    jimbo/
+    public/
+       .htaccess
+       common.php
+       index.php
+    tmp/
+    tpl/
+
+
+  Minimum Requirements
+  
+  Apache
+    - mod_rewrite enabled
+    - AllowOverride FileInfo
+  
+  PHP 4
+    - short_open_tag = On
+  
+  MySQL
+  
+  Filesystem
+    - tmp/ change permission to 0777

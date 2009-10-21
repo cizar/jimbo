@@ -1,0 +1,28 @@
+<?php
+
+	/*
+	 * load_function.php
+	 *
+	 * This file is a part of Jimbo package. http://www.nixar.org/jimbo
+	 * 
+	 * Copyright (c) 2007, Cesar Kastli <cesar@nixar.org>
+	 *
+	 * This library is free software; you can redistribute it and/or modify
+	 * it under the terms of the GNU Lesser General Public License as
+	 * published by the Free Software Foundation; either version 2.1 of the
+	 * License, or (at your option) any later version
+	 *
+	 * See http://www.gnu.org/copyleft/lesser.html for details
+	 *
+	 */
+	
+	function load_function ()
+	{
+		if (func_num_args() == 0)
+			die('load_function: Wrong parameter count');
+		
+		$functions = func_get_args();
+		
+		foreach ($functions as $function)
+			require_once(LIB_DIR . DS . preg_replace('/[\/\\\]/', DS, $function) . '.php');
+	}
